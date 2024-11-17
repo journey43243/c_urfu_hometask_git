@@ -52,9 +52,16 @@ int main(){
     obj3.publisher = "Азбука";
     obj3.rating = 4.1;
 
+    book obj4;
+    obj4.creator = "А.С.Пушкин";
+    obj4.isbn = "978-5-389-16529-3";
+    obj4.pages = 320;
+    obj4.publisher = "Азбука";
+    obj4.rating = 4.1;
 
-    const book* strcs{new book[3] {obj1, obj2, obj3}};
-    cout << struct_func(3, &strcs) << endl;
+
+    const book* strcs{new book[4] {obj1, obj2, obj3, obj4}};
+    cout << struct_func(4, &strcs) << endl;
     delete [] strcs;
     strcs = nullptr;
 }
